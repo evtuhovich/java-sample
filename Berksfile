@@ -69,3 +69,9 @@ group :zabbix do
   cookbook 'zabbix_lwrp'
   cookbook 'zabbix_templates', git: 'git@github.com:express42-cookbooks/zabbix_templates.git'
 end
+
+group :tomcat do
+  cookbook 'postgresql_lwrp'
+  cookbook 'tomcat'
+  cookbook 'java-sample', path: "cookbooks/java-sample"
+end

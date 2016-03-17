@@ -40,6 +40,10 @@ suites:
     run_list:
       - role[base]
       - role[zabbix-server]
+  - name: tomcat-server
+    run_list:
+      - role[base]
+      - role[tomcat-server]
   - name: all
     run_list:
       - recipe[apt]

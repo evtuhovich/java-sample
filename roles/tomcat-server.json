@@ -3,11 +3,23 @@
   "description": "Installs and configures Tomcat server",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "java": {
+      "jdk_version": "8",
+      "install_flavor": "oracle",
+      "oracle": {
+        "accept_oracle_download_terms": true
+      },
+      "ark_timeout": 600,
+      "ark_download_timeout": 600
+    }
   },
+
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[java]",
+    "recipe[postgresql_lwrp::apt_official_repository]",
     "recipe[java-sample]"
   ],
   "env_run_lists": {

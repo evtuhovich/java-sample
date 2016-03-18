@@ -73,5 +73,6 @@ end
 group :tomcat do
   cookbook 'postgresql_lwrp'
   cookbook 'tomcat'
+  cookbook 'java'
   cookbook 'java-sample', path: "cookbooks/java-sample"
 end

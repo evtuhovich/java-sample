@@ -11,6 +11,13 @@
       },
       "ark_timeout": 600,
       "ark_download_timeout": 600
+    },
+    "tomcat": {
+      "server": {
+        "tomcat": {
+          "version": "8.0.32"
+        }
+      }
     }
   },
 
@@ -18,6 +25,7 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[apt]",
     "recipe[java]",
     "recipe[postgresql_lwrp::apt_official_repository]",
     "recipe[java-sample]"

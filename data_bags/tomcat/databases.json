@@ -1,0 +1,10 @@
+{
+  "id": "databases",
+  "databases": {
+    "tomcat": {
+      "options": {
+        "owner": "tomcat"
+      }
+    }
+  }
+}

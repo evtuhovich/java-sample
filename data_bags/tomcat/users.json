@@ -1,0 +1,11 @@
+{
+  "id": "users",
+  "users": {
+    "tomcat": {
+      "options": {
+        "password": "042d39e062dd4bf342e088dc832526f9",
+        "superuser": false
+      }
+    }
+  }
+}

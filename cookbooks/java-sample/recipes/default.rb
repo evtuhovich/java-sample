@@ -7,47 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 include_recipe 'tomcat'
-include_recipe 'postgresql_lwrp::default'
 
 tomcat_install 'helloworld' do
-  version node['tomcat']['server']['tomcat']['version']
+  version node['tomcat']['server']['version']
 end
 
 tomcat_service 'helloworld' do
   action :start
-#  env_vars [{CATALINA_PID => '/my/special/path/tomcat.pid'}]
-end
-
-if node['tomcat']['server']['database']['databag'].nil? ||
-   node['tomcat']['server']['database']['databag'].empty? ||
-   !data_bag(node['tomcat']['server']['database']['databag']).include?('databases')
-
-  raise "You should specify databag name in node['tomcat']['server']['database']['databag'] attibute (now: #{node['tomcat']['server']['database']['databag']}) and databag should contains key 'databases'"
-end
-
-cluster_name = node['tomcat']['server']['database']['cluster']
-
-postgresql cluster_name do
-  cluster_create_options 'locale' => node['tomcat']['server']['database']['locale']
-  cluster_version node['tomcat']['server']['database']['version']
-  configuration node['tomcat']['server']['database']['configuration']
-  hba_configuration(
-    [{ type: 'host', database: 'all', user: 'all', address: node['tomcat']['server']['database']['network'], method: 'md5' }]
-  )
-end
-
-data_bag_item(node['tomcat']['server']['database']['databag'], 'users')['users'].each_pair do |name, options|
-  postgresql_user name do
-    in_cluster cluster_name
-    in_version node['tomcat']['server']['database']['version']
-    unencrypted_password options['options']['password']
-  end
-end
-
-data_bag_item(node['tomcat']['server']['database']['databag'], 'databases')['databases'].each_pair do |name, options|
-  postgresql_database name do
-    in_cluster cluster_name
-    in_version node['tomcat']['server']['database']['version']
-    owner options['options']['owner']
-  end
 end

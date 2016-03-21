@@ -9,7 +9,7 @@
 include_recipe 'tomcat'
 
 tomcat_install 'helloworld' do
-  version node['tomcat']['server']['version']
+  version node['java-sample']['server']['version']
 end
 
 tomcat_service 'helloworld' do

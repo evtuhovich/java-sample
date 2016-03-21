@@ -12,11 +12,9 @@
       "ark_timeout": 600,
       "ark_download_timeout": 600
     },
-    "tomcat": {
+    "java-sample": {
       "server": {
-        "tomcat": {
-          "version": "8.0.32"
-        }
+        "version": "8.0.32"
       }
     }
   },

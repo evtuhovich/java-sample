@@ -1,6 +1,6 @@
 {
-  "name": "tomcat-server",
-  "description": "Installs and configures Tomcat server",
+  "name": "java-sample",
+  "description": "Installs and configures Tomcat and PostgreSQL for application Java-Sample",
   "json_class": "Chef::Role",
   "default_attributes": {
   },

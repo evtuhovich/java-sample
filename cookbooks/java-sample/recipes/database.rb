@@ -6,7 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'postgresql_lwrp::default'
 
 if node['java-sample']['database']['databag'].nil? ||
    node['java-sample']['database']['databag'].empty? ||

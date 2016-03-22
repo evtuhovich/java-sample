@@ -6,7 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'tomcat'
 
 tomcat_install 'helloworld' do
   version node['java-sample']['server']['version']

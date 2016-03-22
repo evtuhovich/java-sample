@@ -52,7 +52,7 @@
     },
     "java-sample": {
       "database": {
-        "databage": "postgresql-dev"
+        "databag": "postgresql-dev"
       }
     }
   },

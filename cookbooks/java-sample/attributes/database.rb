@@ -4,7 +4,7 @@ default['java-sample']['database']['lvm_volume'] = '/dev/sda3'
 default['java-sample']['database']['partition_size'] = '10G'
 
 default['java-sample']['database']['cluster'] = 'main'
-default['java-sample']['database']['databag'] = 'tomcat'
+default['java-sample']['database']['databag'] = 'postgresql'
 default['java-sample']['database']['locale'] = 'en_US.utf8'
 default['java-sample']['database']['mount_point'] = '/var/lib/postgresql'
 default['java-sample']['database']['network'] = '127.0.0.0/8'

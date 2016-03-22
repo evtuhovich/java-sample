@@ -49,6 +49,11 @@
       },
       "ark_timeout": 600,
       "ark_download_timeout": 600
+    },
+    "java-sample": {
+      "database": {
+        "databage": "postgresql-dev"
+      }
     }
   },
   "override_attributes": {

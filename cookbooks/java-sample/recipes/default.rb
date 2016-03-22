@@ -6,11 +6,3 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
-tomcat_install 'helloworld' do
-  version node['java-sample']['tomcat']['version']
-end
-
-tomcat_service 'helloworld' do
-  action :start
-end

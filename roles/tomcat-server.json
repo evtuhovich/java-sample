@@ -11,7 +11,7 @@
     "recipe[apt]",
     "recipe[java]",
     "recipe[postgresql_lwrp::apt_official_repository]",
-    "recipe[java-sample]",
+    "recipe[java-sample::tomcat]",
     "recipe[java-sample::database]"
   ],
   "env_run_lists": {

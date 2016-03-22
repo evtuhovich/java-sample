@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: java-sample
-# Recipe:: default
+# Recipe:: database
 #
 # Copyright 2016, YOUR_COMPANY_NAME
 #

@@ -8,7 +8,7 @@
 #
 
 tomcat_install 'helloworld' do
-  version node['java-sample']['server']['version']
+  version node['java-sample']['tomcat']['version']
 end
 
 tomcat_service 'helloworld' do

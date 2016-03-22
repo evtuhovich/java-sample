@@ -49,7 +49,7 @@
       },
       "ark_timeout": 600,
       "ark_download_timeout": 600
-    },
+    }
   },
   "override_attributes": {
     "authorization": {

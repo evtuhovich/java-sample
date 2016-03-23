@@ -8,7 +8,7 @@ provisioner:
   data_bags_path: data_bags
   encrypted_data_bag_secret_key_path: .chef/encrypted_data_bag_secret
   client_rb:
-    environment: vagrant
+    environment: dev
 
 platforms:
   - name: ubuntu-14.04
@@ -19,4 +19,4 @@ suites:
   - name: tomcat-server
     run_list:
       - role[base]
-      - role[tomcat-server]
+      - role[java-sample]

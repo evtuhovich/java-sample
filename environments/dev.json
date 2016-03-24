@@ -47,12 +47,16 @@
       "oracle": {
         "accept_oracle_download_terms": true
       },
-      "ark_timeout": 600,
-      "ark_download_timeout": 600
+      "ark_timeout": 1200,
+      "ark_download_timeout": 1200
     },
     "java-sample": {
       "database": {
-        "databag": "postgresql-dev"
+        "databag": "postgresql-dev",
+        "version": "9.4"
+      },
+      "tomcat": {
+        "version": "8.0.32"
       }
     }
   },

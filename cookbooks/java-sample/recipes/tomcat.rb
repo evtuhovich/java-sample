@@ -8,7 +8,9 @@
 #
 
 tomcat_install 'helloworld' do
-  version node['java-sample']['tomcat']['version']
+  if node.attribute?("java-sample") && node["java-sample"].attribute?("tomcat") && node["java-sample"]["tomcat"].attribute?("version")
+    version node['java-sample']['tomcat']['version']
+  end
 end
 
 tomcat_service 'helloworld' do

@@ -16,3 +16,14 @@ end
 tomcat_service 'helloworld' do
   action :start
 end
+
+cookbook_file "/opt/tomcat_helloworld/conf/tomcat-users.xml" do
+  owner "tomcat_helloworld"
+  notifies :restart, "tomcat_service[helloworld]"
+end
+
+template "/opt/tomcat_helloworld/conf/server.xml" do
+  owner "tomcat_helloworld"
+  notifies :restart, "tomcat_service[helloworld]"
+  variables listen_port: 9090
+end
